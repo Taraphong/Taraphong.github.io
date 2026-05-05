@@ -6,6 +6,8 @@
   --line: #292a28;
   --line-soft: #727373;
   --text: #ffffff;
+  --text-terminal: #646564;
+  --text-skill: #A496C6;
   --accent: #02d8e4;
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --shadow-accent: 0 0 20px rgba(2, 216, 228, 0.72);
@@ -44,7 +46,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  width: min(100%, 1180px);
+  width: min(100%, auto);
   margin: 0 auto;
   padding: 20px;
   border-bottom: 1px solid var(--line-soft);
@@ -249,9 +251,59 @@ header {
   font-size: 0.95rem;
 }
 
+.terminal-body p:nth-child(2) {
+  color: var(--text-terminal);
+}
+
+.terminal-body p:nth-child(3) {
+  margin-top: 12px;
+}
+
 .terminal-body p span {
   color: var(--accent);
 }
+
+.terminal-body ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 18px;
+}
+
+.terminal-body ul li {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  color: var(--text-skill);
+}
+
+.terminal-body ul li span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.terminal-body ul li:nth-child(1) span {
+  background-color: #e34c26;
+}
+.terminal-body ul li:nth-child(2) span {
+  background-color: #264de4;
+}
+.terminal-body ul li:nth-child(3) span {
+  background-color: #f0db4f;
+}
+.terminal-body ul li:nth-child(4) span {
+  background-color: #306998;
+}
+.terminal-body ul li:nth-child(5) span {
+  background-color: #61dbfb;
+}
+.terminal-body ul li:nth-child(6) span {
+  background-color: #68a063;
+}
+
 
 @media (max-width: 720px) {
   .navbar {
